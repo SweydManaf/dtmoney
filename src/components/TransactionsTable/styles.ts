@@ -15,21 +15,23 @@ export const Container = styled.div`
       line-height: 1.5rem;
     }
 
+    tr {
+      background-color: var(--shape);
+    }
+
     td {
       padding: 1rem 2rem;
       border: 0;
-      background-color: var(--shape);
       color: var(--text-body);
-      border-radius: 0.25rem;
 
       &:first-child {
         color: var(--text-title);
       }
-      &.deposit{
+      &.deposit {
         color: var(--green);
       }
 
-      &.withdraw{
+      &.withdraw {
         color: var(--red);
       }
     }
