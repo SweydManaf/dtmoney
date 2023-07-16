@@ -6,7 +6,7 @@ import { Container, TransactionTypeContainer } from "./style";
 import { RadioBox } from "./style";
 import { FormEvent, useState, useContext } from "react";
 import { api } from "../../services/api";
-import { TransactionContext } from "../../TransactionsContexts";
+import { useTransactions } from "../../hooks/useTransactions";
 
 interface NewTransactionModalProps {
   isOpen: boolean;
@@ -22,7 +22,7 @@ export function NewTransactionModal({
   const [category, setCategory] = useState("");
   const [type, setType] = useState("deposit");
 
-  const { createTransaction } = useContext(TransactionContext);
+  const { createTransaction } = useTransactions();
 
   async function handleCreateNewTransaction(event: FormEvent) {
     event.preventDefault();

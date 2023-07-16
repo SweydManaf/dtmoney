@@ -8,7 +8,7 @@ import { NewTransactionModal } from "./components/NewTransactionModal";
 import {
   TransactionContext,
   TransactionProvider,
-} from "./TransactionsContexts";
+} from "./hooks/useTransactions";
 
 Modal.setAppElement("#root");
 
